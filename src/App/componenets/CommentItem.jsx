@@ -28,10 +28,10 @@ const CommentItem = ({ user, createdAt, text, _id, postId }) => {
           <p className="inline-flex items-center mr-3 text-sm text-gray-900">
             <img
               className="mr-2 w-6 h-6 rounded-full"
-              src={user.avatarUrl}
+              src={user?.avatarUrl}
               alt="Michael Gough"
             />
-            {user.fullName}
+            {user?.fullName}
           </p>
           <p className="text-sm text-gray-600">
             <time
@@ -43,7 +43,7 @@ const CommentItem = ({ user, createdAt, text, _id, postId }) => {
             </time>
           </p>
         </div>
-        {userData._id === user._id && (
+        {userData?._id === user?._id && (
           <DeleteButton onClick={handleClick}>Удалить</DeleteButton>
         )}
       </div>
