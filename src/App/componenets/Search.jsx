@@ -1,8 +1,12 @@
 import React from "react";
 
-const Filter = () => {
+const Search = ({ value, onChange }) => {
+  const handleChange = ({ target }) => {
+    onChange(target.value);
+  };
+
   return (
-    <form>
+    <form className="flex-1">
       <label
         htmlFor="default-search"
         className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
@@ -29,20 +33,16 @@ const Filter = () => {
         </div>
         <input
           type="search"
+          value={value}
+          onChange={handleChange}
           id="default-search"
           className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500"
           placeholder="Search Mockups, Logos..."
           required
         />
-        <button
-          type="submit"
-          className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-        >
-          Search
-        </button>
       </div>
     </form>
   );
 };
 
-export default Filter;
+export default Search;
