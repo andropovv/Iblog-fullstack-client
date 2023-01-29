@@ -37,10 +37,10 @@ const PostItem = ({
       <div className="mt-6">
         <div className="flex justify-between">
           <Link className="flex items-center">
-            {user.avatarUrl ? (
+            {user?.avatarUrl ? (
               <img
                 className="w-10 h-10 rounded-full"
-                src={user.avatarUrl}
+                src={user?.avatarUrl}
                 alt="Rounded avatar"
               />
             ) : (
@@ -61,7 +61,7 @@ const PostItem = ({
             )}
 
             <span className="ml-2 text-gray-600 text-xl font-semibold">
-              {user.fullName}
+              {user?.fullName}
             </span>
           </Link>
           <time className="text-gray-600 text-xl" dateTime={createdAt}>
