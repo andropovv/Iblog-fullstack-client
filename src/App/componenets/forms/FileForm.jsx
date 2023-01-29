@@ -9,6 +9,7 @@ const FileForm = ({ name, onChange, label }) => {
       const { data } = await instance.post("/upload", formData);
       onChange({
         name: target.name,
+
         value: `${process.env.REACT_APP_API_URL}${data.url}`,
       });
     } catch (error) {
