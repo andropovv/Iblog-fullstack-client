@@ -51,7 +51,7 @@ const Register = () => {
       formData.append("image", avatar[0]);
 
       const { data } = await instance.post("/upload", formData);
-      setAvatarUrl(`http://localhost:4444${data.url}`);
+      setAvatarUrl(`${process.env.REACT_APP_API_URL}${data.url}`);
     } catch (error) {
       console.log("Error of upload the image");
     }

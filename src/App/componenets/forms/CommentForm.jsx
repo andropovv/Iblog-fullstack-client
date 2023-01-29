@@ -19,7 +19,7 @@ const CommentForm = () => {
   const handleSubmit = async () => {
     try {
       await instance.post(
-        `http://localhost:4444/posts/${postId}/createComment`,
+        `${process.env.REACT_APP_API_URL}/posts/${postId}/createComment`,
         {
           text: commentText,
         }

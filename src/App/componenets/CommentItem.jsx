@@ -13,7 +13,9 @@ const CommentItem = ({ user, createdAt, text, _id, postId }) => {
 
   const handleClick = async () => {
     try {
-      await instance.delete(`http://localhost:4444/posts/${postId}/${_id}`);
+      await instance.delete(
+        `${process.env.REACT_APP_API_URL}/${postId}/${_id}`
+      );
       dispatch(loadCommentsForPost(postId));
       dispatch(fetchPosts());
     } catch (error) {

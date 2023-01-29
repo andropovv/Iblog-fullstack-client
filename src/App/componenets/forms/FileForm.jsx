@@ -9,7 +9,7 @@ const FileForm = ({ name, onChange, label }) => {
       const { data } = await instance.post("/upload", formData);
       onChange({
         name: target.name,
-        value: `http://localhost:4444${data.url}`,
+        value: `${process.env.REACT_APP_API_URL}${data.url}`,
       });
     } catch (error) {
       console.log(`Ошибка при загрузке изображения. \n ${error.message}`);
