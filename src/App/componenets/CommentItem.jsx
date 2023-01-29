@@ -29,7 +29,7 @@ const CommentItem = ({ user, createdAt, text, _id, postId }) => {
             <img
               className="mr-2 w-6 h-6 rounded-full"
               src={user?.avatarUrl}
-              alt="Michael Gough"
+              alt=""
             />
             {user?.fullName}
           </p>

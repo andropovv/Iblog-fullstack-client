@@ -21,7 +21,7 @@ const PostItem = ({
             <img
               src={imageUrl}
               className="w-full h-auto hover:scale-105 transition transition-all duration-200 ease-in-out"
-              alt="Sample Cover"
+              alt=""
             />
           </div>
         )}
@@ -41,7 +41,7 @@ const PostItem = ({
               <img
                 className="w-10 h-10 rounded-full"
                 src={user?.avatarUrl}
-                alt="Rounded avatar"
+                alt=""
               />
             ) : (
               <div className="overflow-hidden relative w-10 h-10 bg-gray-100 rounded-full dark:bg-gray-600">
